@@ -42,7 +42,7 @@ app.get('/updateSvn', (req, res) => {
         res.status(403).send("Forbidden")
     } else {
         let svn_path = req.query.path?.toString() ?? "";
-        if(req.query.type) svn_path = process.env[`SVN_${req.query.type}`] ?? ""
+        if(req.query.type && req.query.type !== 'custom') svn_path = process.env[`SVN_${req.query.type}`] ?? ""
 
         if (!svn_path) {
             res.status(403).send('Invalid svn path');
