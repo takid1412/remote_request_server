@@ -4,7 +4,7 @@ export class Logger {
 
         const formatConsoleDate = (date: Date) => {
             const padding = (num: Number) => {
-                return num.toString().padEnd(2, '0')
+                return num.toString().padStart(2, '0')
             };
 
             return `[${padding(date.getHours())}:${padding(date.getMinutes())}:${padding(date.getSeconds())}] `;
