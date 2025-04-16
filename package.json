@@ -1,0 +1,27 @@
+{
+  "name": "remote_request_server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "ts-node-dev --respawn src/index.ts",
+    "build": "tsc",
+    "start": "tsc && node dist/index.js",
+    "pm2": "ts-node-dev pm2.ts"
+  },
+  "private": true,
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.14.1",
+    "@types/uglify-js": "^3.17.5",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "express": "^4.21.2",
+    "rimraf": "^5.0.10",
+    "svn-spawn": "^0.1.6",
+    "uglify-js": "^3.19.3"
+  }
+}
